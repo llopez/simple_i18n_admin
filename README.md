@@ -16,7 +16,7 @@ Installation
 
 Add to your Gemfile.
 
-    gem 'simple-i18n-admin', :git => 'http://github.com/llopez/simple-i18n-admin', :require => 'simple_i18n_admin'
+    gem 'simple-i18n-admin', :git => 'git@github.com:llopez/simple_i18n_admin.git', :require => 'simple_i18n_admin'
 
 Then
 
