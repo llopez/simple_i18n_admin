@@ -1,4 +1,4 @@
-= link_to "New translation", new_translation_path
+= link_to "New translation", new_simple_i18n_admin_translation_path
 %br
 %h2 Search translations:
 = render "search"
@@ -19,7 +19,7 @@
       %td= t(translation.key, :locale => translation.locale).class
       %td= t(translation.key, :locale => translation.locale)
       %td
-        = link_to "Edit", edit_translation_path(translation)
-        = link_to "Destroy", translation_path(translation), :method => "delete", :confirm => "yes?"
+        = link_to "Edit", edit_simple_i18n_admin_translation_path(translation)
+        = link_to "Destroy", simple_i18n_admin_translation_path(translation), :method => "delete", :confirm => "yes?"
 
 = will_paginate @translation

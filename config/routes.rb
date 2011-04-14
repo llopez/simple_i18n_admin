@@ -1,6 +1,8 @@
-SimpleI18nAdmin::Application.routes.draw do
-  resources :translations do
-    get :search, :on => :collection
+Rails.application.routes.draw do
+  namespace :simple_i18n_admin do
+    resources :translations do
+      get :search, :on => :collection
+    end
+    root :to => "translations#index"
   end
-  root :to => "translations#index"
 end

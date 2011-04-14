@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title Simple I18n Admin
+    = javascript_include_tag "simple_i18n_admin/jquery.min.js", "simple_i18n_admin/rails.js"
+    = csrf_meta_tag
+  %body
+    = link_to simple_i18n_admin_root_path do
+      %h1 Simple I18n Admin
+    %div
+      = flash[:notice] || flash[:error]
+    = yield

@@ -1,4 +1,4 @@
-class Translation
+class SimpleI18nAdmin::Translation
   include ActiveModel::Validations
   include ActiveModel::Naming
   include ActiveModel::Conversion
