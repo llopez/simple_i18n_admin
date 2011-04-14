@@ -1,0 +1,14 @@
+= form_for @translation do |f|
+  = f.label :locale
+  %br
+  = f.select :locale, ['en', 'es-AR', 'es-ES']
+  %br
+  = f.label :key
+  %br
+  = f.text_field :key, :size => 60
+  %br
+  = f.label :value
+  %br
+  = f.text_area :value
+  %br
+  = f.submit

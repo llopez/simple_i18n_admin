@@ -1,0 +1,25 @@
+= link_to "New translation", new_translation_path
+%br
+%h2 Search translations:
+= render "search"
+%br
+%table(width="100%")
+  %tr
+    %th Locale
+    %th Key
+    %th Value
+    %th Class
+    %th I18n.t
+    %th Actions
+  - @translations.each do |translation|
+    %tr
+      %td= translation.locale
+      %td= translation.key
+      %td= translation.value
+      %td= t(translation.key, :locale => translation.locale).class
+      %td= t(translation.key, :locale => translation.locale)
+      %td
+        = link_to "Edit", edit_translation_path(translation)
+        = link_to "Destroy", translation_path(translation), :method => "delete", :confirm => "yes?"
+
+= will_paginate @translation
