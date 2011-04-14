@@ -6,9 +6,8 @@ begin
     gem.email = "luigibyte@gmail.com"
     gem.homepage = "http://github.com/llopez/simple-i18n-admin"
     gem.name = "simple-i18n-admin"
-    #gem.summary = ""
+    gem.summary = "Admin tool for i18n translations"
     gem.files = Dir["{lib}/**/*", "{app}/**/*", "{config}/**/*"]
-    #gem.add_dependency 'yui-compressor'
   end
 rescue
   puts "Jeweler or one of its dependencies is not installed."

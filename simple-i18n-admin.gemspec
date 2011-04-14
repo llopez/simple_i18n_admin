@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/llopez/simple-i18n-admin}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = nil
+  s.summary = %q{Admin tool for i18n translations}
   s.test_files = [
     "test/performance/browsing_test.rb",
     "test/test_helper.rb"
