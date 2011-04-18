@@ -26,6 +26,13 @@ Then
 
     $ rake simple_i18n_admin:import
 
+Configuration
+------------------------------------------------------------------------------
+
+In your config/application.rb
+
+    config.simple_i18n_admin.db = 2 # this is the redis database number (default 0)
+
 Usage
 ------------------------------------------------------------------------------
 

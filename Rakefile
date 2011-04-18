@@ -1,7 +1,7 @@
 begin
   require "jeweler"
   Jeweler::Tasks.new do |gem|
-    gem.version = "0.1.0"
+    gem.version = "0.1.2"
     gem.author = "luigibyte"
     gem.email = "luigibyte@gmail.com"
     gem.homepage = "http://github.com/llopez/simple-i18n-admin"

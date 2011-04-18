@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{simple-i18n-admin}
-  s.version = "0.1.0"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["luigibyte"]
-  s.date = %q{2011-04-14}
+  s.date = %q{2011-04-18}
   s.email = %q{luigibyte@gmail.com}
   s.extra_rdoc_files = [
     "README.md"
@@ -24,8 +24,8 @@ Gem::Specification.new do |s|
     "app/views/simple_i18n_admin/translations/edit.html.haml",
     "app/views/simple_i18n_admin/translations/index.html.haml",
     "app/views/simple_i18n_admin/translations/new.html.haml",
-    "config/initializers/i18n_backend.rb",
     "config/routes.rb",
+    "lib/config.rb",
     "lib/simple_i18n_admin.rb",
     "lib/tasks/import.rake"
   ]
