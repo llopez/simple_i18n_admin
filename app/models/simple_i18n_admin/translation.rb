@@ -17,7 +17,7 @@ class SimpleI18nAdmin::Translation
   end  
   
   def destroy
-    TRANSLATIONS_STORE.del "#{locale}.#{key}"
+    I18n.backend.store.del "#{locale}.#{key}"
   end
 
   def save
@@ -28,29 +28,29 @@ class SimpleI18nAdmin::Translation
       sanitized_value = self.value.to_json
     end
     
-    TRANSLATIONS_STORE.set "#{self.locale}.#{self.key}", sanitized_value
+    I18n.backend.store.set "#{self.locale}.#{self.key}", sanitized_value
     
     #I18n.backend.store_translations(self.locale, { self.key => evaluated_value }, :escape => false)
   end
 
   def self.search(term)
-    TRANSLATIONS_STORE.keys.select{|k| k.include?(term)}.collect do |key|
+    I18n.backend.store.keys.select{|k| k.include?(term)}.collect do |key|
       key_scheme = key.split(".")
       locale = key_scheme.shift      
-      self.new(:key => key_scheme.join("."), :value => TRANSLATIONS_STORE.get(key), :locale => locale)
+      self.new(:key => key_scheme.join("."), :value => I18n.backend.store.get(key), :locale => locale)
     end
   end
 
   def self.all
-    TRANSLATIONS_STORE.keys.collect do |key|
+    I18n.backend.store.keys.collect do |key|
       key_scheme = key.split(".")
       locale = key_scheme.shift
-      self.new(:key => key_scheme.join("."), :value => TRANSLATIONS_STORE.get(key), :locale => locale)
+      self.new(:key => key_scheme.join("."), :value => I18n.backend.store.get(key), :locale => locale)
     end
   end
   
   def self.find(key)
-    if value = TRANSLATIONS_STORE.get(key)
+    if value = I18n.backend.store.get(key)
       key_scheme = key.split(".")
       locale = key_scheme.shift
       self.new(:key => key_scheme.join("."), :value => value, :locale => locale)
